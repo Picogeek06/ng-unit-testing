@@ -1,0 +1,37 @@
+<div class="register-form-wrapper">
+  <form [formGroup]="formGroup" (submit)="onSubmit()" (reset)="formGroup.reset">
+    <div class="form-section">
+      <!-- S:user first name -->
+      <div class="input-field">
+        <div class="form-field-item">
+          <label class="form-label">What is your first name?</label>
+          <input formControlName="firstName" type="text" [(ngModel)]="userFirstName" placeholder="Enter your name"
+            autocomplete="off" />
+        </div>
+      </div>
+      <!-- E:user first name -->
+      <!-- S:user last name -->
+      <div class="input-field">
+        <div class="form-field-item">
+          <label class="form-label">What is your last name?</label>
+          <input formControlName="lastName" type="text" [(ngModel)]="userLastName" placeholder="Enter your last name"
+            autocomplete="off" />
+        </div>
+      </div>
+      <!-- E:user last name -->
+      <!-- S:CTA buttons -->
+      <div class="action">
+        <button class="action-button" type="button">
+          Cancel
+        </button>
+        <button class="action-button" type="reset">
+          Reset
+        </button>
+        <button class="action-button" type="submit">
+          Submit
+        </button>
+      </div>
+      <!-- E:CTA buttons -->
+    </div>
+  </form>
+</div>

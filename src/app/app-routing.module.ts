@@ -8,6 +8,13 @@ const routes: Routes = [
     component: CounterComponent,
   },
   {
+    path: 'users',
+    loadChildren: () =>
+      import('./modules/users/users.module').then(
+        (module) => module.UsersModule
+      ),
+  },
+  {
     path: '**',
     component: CounterComponent,
   },
