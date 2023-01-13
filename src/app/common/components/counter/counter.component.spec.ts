@@ -55,10 +55,5 @@ describe('CounterComponent', () => {
     subtractButtonElement?.dispatchEvent(new Event('click'));
     expect(component.count).toEqual(0);
   });
-
-  // it('should contain count as "1" after add button click in DOM initially', () => {
-  //   const  countElement = counterElement.querySelector('.display');
-  //   expect(countElement?.textContent).toEqual('1');
-  // })
 });
 
