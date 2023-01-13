@@ -1,0 +1,57 @@
+@import '../../../../../styles.scss';
+
+.register-form-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  form {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    border: 2px solid $themeOrange;
+    border-radius: 6px;
+  }
+
+  .input-field {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+    &-label {
+      margin-bottom: 6px;
+    }
+  }
+
+  .action {
+    display: flex;
+    padding: 10px;
+
+    &-button {
+      font-family: $SourceSansProBold;
+      width: 100px;
+      height: 30px;
+      border-radius: 4px;
+      appearance: none;
+      background-color: $bg_themeBlue;
+      margin-right: 5px;
+
+      &:last-child {
+        margin-right: 0px !important;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: $themeBlue !important;
+        color: $white;
+        font-weight: 600;
+      }
+    }
+  }
+}

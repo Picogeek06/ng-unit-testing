@@ -4,7 +4,7 @@ import { RegisterUserComponent } from './components/register-user/register-user.
 
 const routes: Routes = [
   {
-    path: 'ttt',
+    path: 'register',
     component: RegisterUserComponent,
   },
 ];

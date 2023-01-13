@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./assets/scss/fonts";
+@import "./assets/scss/variables";
+@import "./assets/scss/common";
+@import "./assets/scss/mediaqueries";
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100% !important;
+    font-family: $SourceSansPro !important;
+}
+
+input,
+button {
+    font-family: $SourceSansPro !important;
+    border: 1px solid $inputBorder;
+    border-radius: 4px;
+    height: 28px !important;
+    padding: 0px 10px !important;
+}
+
+input:focus {
+  border-color: inherit;
+}
