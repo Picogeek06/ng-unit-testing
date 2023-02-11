@@ -1,19 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterUserComponent } from './components/register-user/register-user.component';
 import { UsersRoutingModule } from './users-routing.module';
+import { UsersService } from './services/users.service';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { SharedModule } from 'src/app/common/shared.module';
+import { UsersListComponent } from './components/users-list/users-list.component';
 
 
 @NgModule({
   declarations: [
-    RegisterUserComponent
+    RegisterUserComponent,
+    UsersListComponent
   ],
   imports: [
     UsersRoutingModule,
     ReactiveFormsModule,
+    SharedModule,
     FormsModule,
+    CommonModule
   ],
-  providers: []
+  providers: [UsersService]
 })
 export class UsersModule { }

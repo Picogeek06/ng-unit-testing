@@ -1,0 +1,28 @@
+{
+  "data": {
+    "users": [
+      {
+        "id": "1",
+        "name": "Gopal Mishra",
+        "email": "gopal.krishna@gmail.com",
+        "age": 24
+      },
+      {
+        "id": "2",
+        "name": "Bishnu Prasad Sahoo",
+        "email": "bishnu@gmail.com",
+        "age": 25
+      }, 
+      {
+        "id": "3",
+        "name": "Sudhanshu Mishra",
+        "email": "sudhanshu@gmail.com"
+      },
+      {
+        "id": "4",
+        "name": "Gopal Sr.",
+        "email": "gopalsr@gmail.com"
+      }
+    ]
+  }
+}

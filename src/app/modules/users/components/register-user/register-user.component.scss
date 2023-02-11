@@ -10,7 +10,6 @@
 
   form {
     width: 50%;
-    height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,6 +26,13 @@
     &-label {
       margin-bottom: 6px;
     }
+
+    // class to change error-message text color to red
+
+    .error-message {
+      color: $errorRed;
+    }
+
   }
 
   .action {

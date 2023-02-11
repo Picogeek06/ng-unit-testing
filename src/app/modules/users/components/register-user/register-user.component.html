@@ -4,17 +4,56 @@
       <!-- S:user first name -->
       <div class="input-field">
         <label class="input-field-label">What is your first name?</label>
-        <input formControlName="firstName" type="text" [(ngModel)]="userFirstName" placeholder="Enter your name"
+        <input formControlName="firstName" type="text" placeholder="Enter your name"
           autocomplete="off" />
+        
+        <!--div to show validations if any-->
+        <div *ngIf="formGroup.get('firstName').errors?.required && formGroup.get('firstName').touched" class="error-message">
+          *required
+        </div>
       </div>
       <!-- E:user first name -->
       <!-- S:user last name -->
       <div class="input-field">
         <label class="input-field-label">What is your last name?</label>
-        <input formControlName="lastName" type="text" [(ngModel)]="userLastName" placeholder="Enter your last name"
+        <input formControlName="lastName" type="text" placeholder="Enter your last name"
           autocomplete="off" />
+        <!--div to show validations if any-->
+        <div *ngIf="formGroup.get('lastName').errors?.required && formGroup.get('lastName').touched" class="error-message">
+          Last name is required
+        </div>
       </div>
       <!-- E:user last name -->
+      <!-- S:user email -->
+      <div class="input-field">
+        <label class="input-field-label">What is your email?</label>
+        <input formControlName="email" type="email" placeholder="Enter your email"
+          autocomplete="off" />
+          <div *ngIf="formGroup.get('email').errors?.required && formGroup.get('email').touched" class="error-message">
+            Email is required
+          </div>
+      </div>
+      <!-- E:user email -->
+      <!-- S: username -->
+      <div class="input-field">
+        <label class="input-field-label">What is your username?</label>
+        <input formControlName="username" type="text" placeholder="Enter your username"
+          autocomplete="off" />
+          <div *ngIf="formGroup.get('username').errors?.required && formGroup.get('username').touched" class="error-message">
+            {{formGroup.get('username').errors?.validationError}}}
+          </div>
+      </div>
+      <!-- E: username -->
+      <!--S: phone number-->
+      <div class="input-field">
+        <label class="input-field-label">What is your phone number?</label>
+        <input formControlName="phoneNumber" type="text" placeholder="Enter your phone number"
+          autocomplete="off" />
+          <div *ngIf="formGroup.get('phoneNumber').errors?.required && formGroup.get('phoneNumber').touched" class="error-message">
+            Phone number is required
+          </div>
+      </div>
+      <!--E: phone number-->
       <!-- S:CTA buttons -->
       <div class="action">
         <button class="action-button" type="button">
