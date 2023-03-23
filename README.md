@@ -30,9 +30,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 https://www.amadousall.com/how-to-set-up-angular-unit-testing-with-jest/
 
 ## Route Structure:
-1. <host> -> Counter Component with Header
-2. <host>/users -> Takes the user to the users/register page where we have a form with some user inputs for which standard validations are in place.
-3. <host>/users/list -> show render a list of users previously added to the local database (using a local server by using the mockServer package). 
+1. "/" -> Counter Component with Header
+2. "/users" -> Takes the user to the users/register page where we have a form with some user inputs for which standard validations are in place.
+3. "/users/list" -> show render a list of users previously added to the local database (using a local server by using the mockServer package). 
 
 ## Contents:
 1. Unit Testing In Angular Using JEST, integrated in the "Counter" Component. 
