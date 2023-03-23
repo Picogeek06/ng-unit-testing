@@ -28,3 +28,15 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Jest Setup Documentation Link:
 https://www.amadousall.com/how-to-set-up-angular-unit-testing-with-jest/
+
+## Route Structure:
+<host> -> Counter Component with Header
+<host>/users -> Takes the user to the users/register page where we have a form with some user inputs for which standard validations are in place.
+<host>/users/list -> show render a list of users previously added to the local database (using a local server by using the mockServer package). 
+
+## Contents:
+1. Unit Testing In Angular Using JEST, integrated in the "Counter" Component. 
+2. Assignment - 1 - Done
+3. Assignment - 2 - Done
+4. Assignment - 3 - Done
+5. Assignment - 4 - Partially Completed
