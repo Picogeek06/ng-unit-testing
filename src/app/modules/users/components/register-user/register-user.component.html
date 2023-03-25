@@ -30,7 +30,10 @@
         <input formControlName="email" type="email" placeholder="Enter your email"
           autocomplete="off" />
           <div *ngIf="formGroup.get('email').errors?.required && formGroup.get('email').touched" class="error-message">
-            Email is required
+            {{formGroup.get('email').errors?.required ? 'Email is required' : ''}}
+          </div>
+          <div *ngIf="formGroup.get('email').errors?.email && formGroup.get('email').touched" class="error-message">
+            {{formGroup.get('email').errors?.email ? 'Invalid email' : ''}}
           </div>
       </div>
       <!-- E:user email -->
