@@ -40,7 +40,6 @@ export class RegisterUserComponent implements OnInit {
       email: this.formGroup.value.email,
       phoneNumber: this.formGroup.value.phoneNumber,
     }
-    console.log("this.formGroup", this.formGroup);
     if (this.formGroup.valid) {
       this.userName = this.userFirstName + this.userLastName;
       this.usersService.createUser(createUserData).subscribe((res: any) => {
