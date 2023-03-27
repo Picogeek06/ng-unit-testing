@@ -11,10 +11,8 @@ server.get('/api/users', (req, res, next) => {
   res.status(200).send(userData.getUsers);
 });
 
-// TODO: Add a POST route to add a new user
 server.post('/api/users', (req, res, next) => {
   const user = req.body;
-  // userData.getUsers.push(user);
   userData.addUser(user);
   res.status(201).send();
 });
