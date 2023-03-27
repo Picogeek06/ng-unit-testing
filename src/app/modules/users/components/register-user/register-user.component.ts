@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { UsersService } from '../../services/users.service';
 import { usernameValidator } from 'src/app/common/validators/user-validators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register-user',
@@ -17,7 +18,8 @@ export class RegisterUserComponent implements OnInit {
   title: any;
 
   constructor(
-    private usersService: UsersService
+    private usersService: UsersService,
+    private router: Router,
   ) {
     this.initializeForm();
   }
@@ -43,7 +45,13 @@ export class RegisterUserComponent implements OnInit {
     if (this.formGroup.valid) {
       this.userName = this.userFirstName + this.userLastName;
       this.usersService.createUser(createUserData).subscribe((res: any) => {
-      });
+      },
+        (err: any) => {},
+        () => {
+          this.formGroup.reset();
+          this.router.navigate(['/users/list']);
+        }
+      );
     }
   }
 
